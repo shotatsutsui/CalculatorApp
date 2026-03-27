@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="CalculatorApp.View.DisplayArea"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalculatorApp.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <Label x:Name="FormulaDisplay"
+               Content="{Binding FormulaText, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+               HorizontalAlignment="Right"
+               FontSize="20"
+               Foreground="Gray"
+               Margin="0,10,10,0"/>
+
+        <Label x:Name="Display"
+               Content="{Binding DisplayText, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               FontSize="60"/>
+    </StackPanel>
+</UserControl>

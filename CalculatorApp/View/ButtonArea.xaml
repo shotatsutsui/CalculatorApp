@@ -1,0 +1,179 @@
+﻿<UserControl x:Class="CalculatorApp.View.ButtonArea"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CalculatorApp.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="AC"
+                Margin="5"
+                Grid.Column="0"
+                Grid.Row="0"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding ACButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="+/-"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="0"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding PlusMinusButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="%"
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="0"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding OperatorButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="÷"
+                Margin="5"
+                Grid.Column="3"
+                Grid.Row="0"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding OperatorButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="7"
+                Margin="5"
+                Grid.Column="0"
+                Grid.Row="1"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="8"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="1"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="9"
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="1"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="×"
+                Margin="5"
+                Grid.Column="3"
+                Grid.Row="1"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding OperatorButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="4"
+                Margin="5"
+                Grid.Column="0"
+                Grid.Row="2"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="5"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="2"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="6"
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="2"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="-"
+                Margin="5"
+                Grid.Column="3"
+                Grid.Row="2"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding OperatorButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="1"
+                Margin="5"
+                Grid.Column="0"
+                Grid.Row="3"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="2"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="3"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="3"
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="3"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="+"
+                Margin="5"
+                Grid.Column="3"
+                Grid.Row="3"
+                Style="{StaticResource OperatorButtonStyle}"
+                Command="{Binding OperatorButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="0"
+                Margin="5"
+                Grid.Column="0"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Style="{StaticResource DigitButtonStyle}"
+                Command="{Binding NumberButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+
+        <Button Content="."
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="4"
+                Command="{Binding DotButtonCommnad}"
+                Style="{StaticResource OperatorButtonStyle}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+        <Button Content="="
+                Margin="5"
+                Grid.Column="3"
+                Grid.Row="4"
+                Style="{StaticResource EqualsButtonStyle}"
+                Command="{Binding EqualButtonCommnad}"
+                CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"/>
+
+    </Grid>
+</UserControl>
